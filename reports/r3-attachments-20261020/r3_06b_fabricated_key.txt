@@ -1,0 +1,18 @@
+GET /console/v1/company HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: secret-00000...0000
+Accept: application/json
+
+===== RESPONSE =====
+HTTP/1.1 401
+cache-control: no-transform
+content-length: 12
+date: Tue, 20 Oct 2026 00:18:22 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+Unauthorized

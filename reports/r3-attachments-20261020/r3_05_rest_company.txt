@@ -1,0 +1,22 @@
+GET /console/v1/company HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: console-TVZa...3aXU
+Accept: application/json
+
+===== RESPONSE =====
+HTTP/1.1 200
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+statsig-final-byte-size: 208
+content-length: 208
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:18 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"data":{"companyID":"4n6HCY59mDqwX1iSZQtNvx","companyName":"AmpHuntProject","isWarehouseNative":false,"orgID":null,"orgName":null,"resultsUpTo":1792281600000},"message":"Company Data retrieved successfully"}

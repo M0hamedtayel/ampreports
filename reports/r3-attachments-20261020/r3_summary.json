@@ -1,0 +1,127 @@
+{
+ "checks": [
+  {
+   "check": "login Owner",
+   "pass": true,
+   "detail": "session ok"
+  },
+  {
+   "check": "login Member",
+   "pass": true,
+   "detail": "session ok"
+  },
+  {
+   "check": "create_sdkkey 200",
+   "pass": true,
+   "detail": "status=200"
+  },
+  {
+   "check": "company key minted",
+   "pass": true,
+   "detail": "id=5CN4qrxvBPP4kpZA5NDXa8 owner=null scopes=['omni_read_write']"
+  },
+  {
+   "check": "B is Member",
+   "pass": true,
+   "detail": "roleName={'Member'}"
+  },
+  {
+   "check": "leak: company key plaintext to Member",
+   "pass": true,
+   "detail": "id=5CN4qrxvBPP4kpZA5NDXa8 len=51 owner=None"
+  },
+  {
+   "check": "second resolver same key",
+   "pass": true,
+   "detail": "plaintext ids=['5HawoKpgmVkzcRCsem7LWG', '5CN4qrxvBPP4kpZA5NDXa8']"
+  },
+  {
+   "check": "SERVER plaintext too",
+   "pass": true,
+   "detail": "[('4n6Qh4Fw4smWU499JM5sWH', 50)]"
+  },
+  {
+   "check": "/company 200 key-only",
+   "pass": true,
+   "detail": "body[:80]={\"data\":{\"companyID\":\"4n6HCY59mDqwX1iSZQtNvx\",\"companyName\":\"AmpHuntProject\",\"is"
+  },
+  {
+   "check": "/users 200 key-only",
+   "pass": true,
+   "detail": "n_users=3"
+  },
+  {
+   "check": "fabricated key refused",
+   "pass": true,
+   "detail": "status=401"
+  },
+  {
+   "check": "personal key minted",
+   "pass": true,
+   "detail": "id=5YFiXwsZTsAD8CDhnso4Mr owner={'full_name': 'Bruno Hunter', 'id': '13B13WHITpDKkMpbi22BGW'}"
+  },
+  {
+   "check": "personal key refused",
+   "pass": true,
+   "detail": "body={\"message\":\"Must be admin of project or project org\",\"status\":400}"
+  },
+  {
+   "check": "company key PROMOTES",
+   "pass": true,
+   "detail": "body={\"message\":\"User updated successfully.\",\"data\":{\"userID\":\"13B13WHITpDKkMpbi22BGW\",\"email\":\"mohamed-9"
+  },
+  {
+   "check": "read-back role == admin",
+   "pass": true,
+   "detail": "role=admin"
+  },
+  {
+   "check": "audit row captured",
+   "pass": true,
+   "detail": "{\"changeLog\": \"Updated Bruno Hunter roles to Member\", \"actionType\": \"batch_user_role_update\", \"name\": \"AmpHuntProject\", \"updatedBy\": \"CONSOLE API - console-wgBJaLH***************\", \"updatedByUserID\": \"2K4aVXAXbWa6kd3XsJPltQ\", \"modifierEmail\": null, \"time\": \"17:08:24 GMT+0000 (Coordinated Universal Time)\"}"
+  },
+  {
+   "check": "reverted to member",
+   "pass": true,
+   "detail": "role=member"
+  },
+  {
+   "check": "billing queried",
+   "pass": false,
+   "detail": "orgStripeSubscription=None"
+  },
+  {
+   "check": "final CONSOLE box empty",
+   "pass": false,
+   "detail": "box=['e103ef0a-r3']"
+  }
+ ],
+ "audit_row": {
+  "changeLog": "Updated Bruno Hunter roles to Member",
+  "actionType": "batch_user_role_update",
+  "name": "AmpHuntProject",
+  "updatedBy": "CONSOLE API - console-wgBJaLH***************",
+  "updatedByUserID": "2K4aVXAXbWa6kd3XsJPltQ",
+  "modifierEmail": null,
+  "date": "Sat Oct 17 2026",
+  "time": "17:08:24 GMT+0000 (Coordinated Universal Time)"
+ },
+ "summary": {
+  "stamp": "20261020T001853Z",
+  "key_id": "5CN4qrxvBPP4kpZA5NDXa8",
+  "key_mask": "console-TVZa...3aXU",
+  "tiers": {
+   "CONSOLE": 51,
+   "SERVER": 50,
+   "CLIENT": 50
+  },
+  "escalation_status": 201,
+  "role_now": "admin",
+  "role_after": "member",
+  "billing": "None",
+  "final_box": [
+   "e103ef0a-r3"
+  ]
+ },
+ "passed": "17/19"
+}

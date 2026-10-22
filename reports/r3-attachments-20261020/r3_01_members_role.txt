@@ -1,0 +1,30 @@
+POST /api/graphql?company_id=4n6HCY59mDqwX1iSZQtNvx HTTP/1.1
+Host: console.statsig.com
+Content-Type: application/json
+x-csrf-token: 1
+Origin: https://console.statsig.com
+Referer: https://console.statsig.com/4n6HCY59mDqwX1iSZQtNvx/api_keys
+Cookie: <MEMBER SESSION — redacted>
+
+{"id": "839712b20aeab3764ea9a7080e58cf5e", "operationName": null, "variables": {}}
+
+===== RESPONSE =====
+HTTP/1.1 200
+content-security-policy: upgrade-insecure-requests;base-uri 'self';script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://dcs-worker.statsig.workers.dev/v1/download_config_specs/ https://*.statsigcdn.com/ https://cdn.console.statsig.com/ https://cdn.amplitude.com/ 'wasm-unsafe-eval' 'sha256-Fk0qgMP68Y3xjWeUiDvCif4CmwwVT+ImSHdCmA5iFlw=';report-uri /api/report_csp_violation;object-src 'none';form-action 'self';
+x-frame-options: DENY
+x-content-type-options: nosniff, nosniff
+server-timing: auth;dur=18.95849609375, execute;dur=11.8603515625
+cache-control: no-transform
+content-type: application/json; charset=utf-8
+x-statsig-friendly-name: 
+etag: "huwxzptmj3s0"
+content-length: 1008
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:11 GMT
+referrer-policy: strict-origin-when-cross-origin
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+{"data":{"viewer_company":{"organization":null,"all_roles_with_permissions":[{"name":"Admin"},{"name":"Owner"},{"name":"Member"},{"name":"Read Only"}],"members":{"edges":[{"roleName":"Member","node":{"id":"13B13WHITpDKkMpbi22BGW","full_name":"Bruno Hunter","email":"mohamed-9499-3@agentmail.to","is_viewer":true},"id":"CompanyMember:4n6HCY59mDqwX1iSZQtNvx>13B13WHITpDKkMpbi22BGW","__typename":"CompanyMembersEdge"},{"roleName":"Owner","node":{"id":"nZ2wI4FMJek95vjJHdnWR","full_name":"Amina Hunter","email":"mohamed-9499-2@agentmail.to","is_viewer":false},"id":"CompanyMember:4n6HCY59mDqwX1iSZQtNvx>nZ2wI4FMJek95vjJHdnWR","__typename":"CompanyMembersEdge"},{"roleName":"Member","node":{"id":"5mfafx6vDKTD1rosP4VuNz","full_name":"Sam Tester","email":"encouragingteacher162@agentmail.to","is_viewer":false},"id":"CompanyMember:4n6HCY59mDqwX1iSZQtNvx>5mfafx6vDKTD1rosP4VuNz","__typename":"CompanyMembersEdge"}]},"review_groups":[],"invited_emails":[],"pending_join_requests":[],"id":"4n6HCY59mDqwX1iSZQtNvx"}}}

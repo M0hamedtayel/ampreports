@@ -1,0 +1,22 @@
+GET /console/v1/users HTTP/1.1
+Host: statsigapi.net
+STATSIG-API-KEY: console-TVZa...3aXU
+Accept: application/json
+
+===== RESPONSE =====
+HTTP/1.1 200
+access-control-allow-origin: *
+content-type: application/json; charset=utf-8
+statsig-final-byte-size: 567
+content-length: 567
+vary: Accept-Encoding
+date: Tue, 20 Oct 2026 00:18:41 GMT
+cache-control: no-transform
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-statsig-region: gke-us-west1
+set-cookie: <redacted>
+via: 1.1 google
+alt-svc: h3=":443"; ma=2592000
+
+{"message":"User listed successfully.","data":[{"userID":"nZ2wI4FMJek95vjJHdnWR","email":"mohamed-9499-2@agentmail.to","firstName":"Amina","lastName":"Hunter","role":"Owner"},{"userID":"13B13WHITpDKkMpbi22BGW","email":"mohamed-9499-3@agentmail.to","firstName":"Bruno","lastName":"Hunter","role":"member"},{"userID":"5mfafx6vDKTD1rosP4VuNz","email":"encouragingteacher162@agentmail.to","firstName":"Sam","lastName":"Tester","role":"member"}],"pagination":{"itemsPerPage":100,"pageNumber":1,"totalItems":3,"nextPage":null,"previousPage":null,"all":"/console/v1/users"}}
